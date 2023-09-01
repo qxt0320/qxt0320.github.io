@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>个人介绍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        function show自我介绍() {
+            document.getElementById("自我介绍").style.display = "block";
+            document.getElementById("成就介绍").style.display = "none";
+            document.getElementById("发展设想").style.display = "none";
+        }
+        
+        function show成就介绍() {
+            document.getElementById("自我介绍").style.display = "none";
+            document.getElementById("成就介绍").style.display = "block";
+            document.getElementById("发展设想").style.display = "none";
+        }
+        
+        function show发展设想() {
+            document.getElementById("自我介绍").style.display = "none";
+            document.getElementById("成就介绍").style.display = "none";
+            document.getElementById("发展设想").style.display = "block";
+        }
+    </script>
+    <button onclick="show自我介绍()">自我介绍</button>
+    <button onclick="show成就介绍()">成就介绍</button>
+    <button onclick="show发展设想()">发展设想</button>
+</head>
+<body>
+    <div id="自我介绍" style="display: none;">
+        <h2>自我介绍</h2>
+        <img class="profile-photo" src="1.jpg" alt="Profile Photo">
+        <p>你好，我叫邱晓彤，是21级数据科学与大数据技术的学生。</p>
+        <p>喜欢看小说和短视频，喜欢散步跑步健身，喜欢和熟悉的朋友一起聊天旅游，但由于自己是一个i人，不喜欢社交。</p>
+    </div>
+    
+    <div id="成就介绍" style="display: none;">
+        <h2>成就和技能</h2>
+        
+        <ul>
+            <li>在学校的综合学生奖学金中获得了二等奖与三等奖</li>
+            <li>在2023年电工杯数学建模比赛获得了一等奖</li>
+            <li>在2023年福州大学数学建模比赛获得了一等奖</li>
+            <li>在2022年全国大学生数学竞赛比赛获得了省三等奖</li>
+            <li>掌握了Java、Python和C等编程语言</li>
+            <li>掌握数据结构和算法、操作系统、组成原理、计算机网络</li>
+        </ul>
+    </div>
+    
+    <div id="发展设想" style="display: none;">
+        <h2>未来规划</h2>
+        
+                <tr>
+                    <h3>大三</h3>
+                    <p>提高编程能力:参与开源项目、开发个人项目等</p>
+                    
+                </tr>
+                <tr>
+                    <h3>大四</h3>
+                    <p>全力备战考研:争取上岸985！！</p>
+                    
+                </tr>
+                <tr>
+                    <h3>研究生</h3>
+                    <p>专心科研:通过科研提升自己的计算机能力与开发能力，为之后工作打基础</p>
+                    
+                </tr>
+                <tr>
+                    <h3>工作</h3>
+                    <p>专心搞开发:希望可以成为一名优秀合格的软件开发师</p>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
