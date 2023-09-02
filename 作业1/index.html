@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>  
+<head>
+<title>个人介绍</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #3d5fd0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    background-color: #166a9fcb;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    color: #215d77;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  section {
+    padding: 20px;
+  }
+  .hero {
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* 设置背景颜色 */
+  /*background-image: url("3.jpg"); /* 设置背景图片 */
+  background-size: cover; /* 背景图片铺满整个页面 */
+}
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+  <header>
+  <h1>My first website</h1>
+  </header>
+  <nav>
+</head>
+<script>
+var activeContent = null;
+function toggleContent(contentId) {
+  var content = document.getElementById(contentId);
+  if (activeContent && activeContent !== content) {
+  activeContent.style.display = "none";
+  }
+  if (content.style.display === "none") {
+  content.style.display = "block";
+  activeContent = content;
+  } else {
+  content.style.display = "none";
+  activeContent = null;
+  }
+}
+</script>
+</head>
+<body>
+<button onclick="toggleContent('自我介绍')">自我介绍</button>
+<button onclick="toggleContent('成就介绍')">成就介绍</button>
+<button onclick="toggleContent('发展设想')">发展设想</button>
+<div id="自我介绍" style="display: none;">
+  <h2>自我介绍</h2>
+  <p>hello！我叫邱晓彤，是21级数据科学与大数据技术的学生。</p>
+  <p>喜欢看小说和短视频，喜欢散步跑步健身，喜欢和熟悉的朋友一起聊天旅游，但由于自己是一个i人，不喜欢社交。</p>
+  <p>图1为我很喜欢的头像 图2为大学证件照 图3为大二校运会的合影 图四是疫情之后第一次旅游</p>
+  <img class="profile-photo" src="1.jpg" alt="Profile Photo">
+  <img class="profile-photo" src="2.jpg" alt="Profile Photo">
+  <img class="profile-photo" src="4.jpg" alt="Profile Photo">
+  <img class="profile-photo" src="5.jpg" alt="Profile Photo">
+</div>
+<div id="成就介绍" style="display: none;">
+  <h2>成就和技能</h2>
+  <p>在学校的综合学生奖学金中获得了二等奖与三等奖</p>
+  <p>在2023年电工杯数学建模比赛获得了一等奖</p>
+  <p>在2023年福州大学数学建模比赛获得了一等奖</p>
+  <p>在2022年全国大学生数学竞赛比赛获得了省三等奖</p>
+  <p>掌握了Java、Python和C等编程语言</p>
+  <p>掌握数据结构和算法、操作系统、组成原理、计算机网络</p>
+</div>
+<div id="发展设想" style="display: none;">
+  <h2>未来规划</h2>
+  <p>大三:提高编程能力,参与开源项目、开发个人项目等</p>
+  <p>大四:全力备战考研,争取上岸985！！</p>
+  <p>研究生:专心科研,通过科研提升自己的计算机能力与开发能力，为之后工作打基础</p>
+  <p>工作:专心搞开发,希望可以成为一名优秀合格的软件开发师</p>
+</div>
+</body>
+</html>
