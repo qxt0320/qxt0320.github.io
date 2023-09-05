@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>  
+<head>
+<title>个人介绍</title>
+<style>
+  body {
+  font-family: 'Times New Roman', Times;
+  margin: 0;
+  padding: 0;
+  }
+  header {
+  background-color: #3d5fd0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  }
+  nav {
+  background-color: #dbedf8cb;
+  padding: 10px;
+  text-align: center;
+  }
+  nav a {
+  color: #215d77;
+  text-decoration: none;
+  margin: 0 10px;
+  }
+  section {
+  padding: 20px;
+  }
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  }
+  .gallery img {
+  width: 100%;
+  height: auto;
+  }
+  @media (max-width: 768px) {
+  .gallery {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  }
+  body {
+  font-family: SimSun;
+  background-image: url("15.jpg"); /* 设置背景图片 */
+  background-size: cover; /* 背景图片铺满整个页面 */
+}
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.profile-photo1 {
+  width: 150px;
+  height: 150px;
+ /*border-radius: 50%;*/
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.arrow {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0; /* 将字体大小设为0，隐藏文本内容 */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; /* 左侧边框设置为透明 */
+  border-right: 5px solid transparent; /* 右侧边框设置为透明 */
+  border-top: 5px solid #2d5371; /* 顶边设置为实线，控制颜色和粗细 */
+}
+</style>
+</head>
+<body>
+  <header>
+  <h1>My first website</h1>
+  </header>
+  <nav>
+</head>
+<script>
+var activeContent = null;
+function toggleContent(contentId) {
+  var content = document.getElementById(contentId);
+  if (activeContent && activeContent !== content) {
+  activeContent.style.display = "none";
+  }
+  if (content.style.display === "none") {
+  content.style.display = "block";
+  activeContent = content;
+  } else {
+  content.style.display = "none";
+  activeContent = null;
+  }
+}
+</script>
+</head>
+<body>
+<button onclick="toggleContent('自我介绍')" >自我介绍 <span class="arrow">&#9660;</span></button>
+<button onclick="toggleContent('成就与评估')">成就与评估 <span class="arrow">&#9660;</span></button>
+<button onclick="toggleContent('发展设想')">发展设想 <span class="arrow">&#9660;</span></button>
+<button onclick="toggleContent('期待与迷茫')">期待与迷茫 <span class="arrow">&#9660;</span></button>
+<div id="自我介绍" style="display: none;">
+  <h2>自我介绍</h2>
+  <p>hello！我叫邱晓彤，是21级数据科学与大数据技术的学生，担任过副团支书与团支书，来自广东汕头</p>
+  <img class="profile-photo1" src="2.jpg" alt="Profile Photo">
+  <img class="profile-photo1" src="19.jpg" alt="Profile Photo">
+  <img class="profile-photo1" src="20.jpg" alt="Profile Photo">
+  <p>喜欢看小说和短视频，喜欢散步跑步健身，加入了院田径队，认识了一群很好的可以并肩作战的队友</p>
+  <img class="profile-photo1" src="21.jpg" alt="Profile Photo">
+  <img class="profile-photo1" src="22.jpg" alt="Profile Photo">
+  <img class="profile-photo1" src="23.jpg" alt="Profile Photo">
+  <p>喜欢和熟悉的朋友一起聊天旅游，但由于自己是一个i人，不喜欢社交，不喜欢交朋友</p>
+  <img class="profile-photo" src="5.jpg" alt="Profile Photo">
+  <img class="profile-photo" src="11.jpg" alt="Profile Photo">
+  <p>偶尔是一个话题终结者，不过情绪算是比较稳定，适应力也比较强</p>
+</div>
+<div id="成就与评估" style="display: none;">
+  <h2>成就</h2>
+  <p>在学校的综合奖学金中获得二等奖与三等奖</p>
+  <p>在2023年电工杯数学建模比赛获得一等奖</p>
+  <p>在2023年福州大学数学建模比赛获得一等奖</p>
+  <p>在2022年全国大学生数学竞赛比赛获得省三等奖</p>
+  <p>掌握了Java、Python和C等编程语言，数据结构和算法、操作系统、组成原理、计算机网络等专业课</p>
+  <img class="profile-photo" src="12.jpg" alt="Profile Photo">
+  <p>在专业课上，学习了导论与大数据实践，本学期将会学习大数据计算、数据采集与挖掘以及实操大数据项目</p>
+  <h2>评估</h2>
+  <p>目前只有一个srtp项目在进行，并无其他科研经验，因此认为自己可能缺乏一定的科研能力</p>
+  <p>在阅读文献时因为知识储备有限，故难以抓住文献的重点，阅读较为困难</p>
+  <p>不擅长与他人沟通交流，在进行团队项目时难以向他人准确地传达自己的意思</p>
+</div>
+<div id="发展设想" style="display: none;">
+  <h2>未来规划</h2>
+  <button onclick="toggleContent('大三')">大三 <span class="arrow">&#9660;</span></button>
+  <button onclick="toggleContent('大四')">大四 <span class="arrow">&#9660;</span></button>
+  <button onclick="toggleContent('研究生')">研究生 <span class="arrow">&#9660;</span></button>
+</div>
+<div id="大三" style="display: none;">
+  <h3>大三</h3>
+  <p>大三大家开始有了比前两年更清晰的规划：直接工作？考研？考公？</p>
+  <p>对于我，可能更加倾向于保研与考研两手抓。</p>
+  <p>因此，在大三上可能更加注重课业的学习，争取让成绩更上一个台阶；大三下，在保证课业不被耽误的前提下开始进行考研的准备。</p>
+  <img class="profile-photo1" src="6.jpg" alt="Profile Photo">
+  <img class="profile-photo1" src="7.jpg" alt="Profile Photo">
+</div>
+<div id="大四" style="display: none;">
+  <h3>大四</h3>
+  <p>如果可以顺利保研，则会提前联系导师开始自己的研0生活进行相关知识的学习，同时完成自己的毕业设计与论文</p>
+  <p>如果无法顺利保研，则全身心投入到考研中，并且在之后完成毕业设计与论文</p>
+  <img class="profile-photo1" src="8.jpg" alt="Profile Photo">
+  <img class="profile-photo1" src="9.jpg" alt="Profile Photo">
+</div>
+<div id="研究生" style="display: none;">
+  <h3>研究生</h3>
+  <p>研究生第一年在学好理论基础的同时，尝试理论与实践的深度融合，同时尝试写高水平的论文与专利。</p>
+  <p>研究生第二年积极参加科研，解决实际的生活或工程问题，希望对公司企业有积极意义。</p>
+  <p>研究生第三年参加校招或自己网上投简历，同时开始完成毕业论文。</p>
+  <img class="profile-photo1" src="10.jpg">
+</div>
+<div id="期待与迷茫" style="display: none;">
+  <h2>期待与迷茫</h2>
+  <p>新学期的开始，总会立下flag要好好学习，多掌握一点专业知识，积累一点实战经验，为以后的工作打好基础。</p>
+  <img class="profile-photo1" src="16.jpg" alt="Profile Photo">
+  <img class="profile-photo1" src="17.jpg" alt="Profile Photo">
+  <p>但学校教的知识多广且杂，学习的编程语言大多只停留在表面，没有更深层次地掌握，因此实操起来很困难，对于未来工作很是迷茫</p>
+  <p>害怕简历不够出色，找不到满意的工作；害怕被人工智能取代；害怕程序员的35岁危机......</p>
+  <img class="profile-photo1" src="18.jpg" alt="Profile Photo">
+</div>
+</body>
+</html>
